@@ -1,0 +1,273 @@
+/* Basic settings */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #243247;
+  background: #f3f6fa;
+  line-height: 1.7;
+}
+
+a {
+  color: #176b64;
+  text-underline-offset: 4px;
+}
+
+.container {
+  width: min(1040px, 90%);
+  margin: 0 auto;
+}
+
+/* Header and navigation */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e1e7ef;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #172b46;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+nav a {
+  color: #46556a;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #176b64;
+  text-decoration: underline;
+}
+
+/* Introduction */
+.hero {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: center;
+  gap: 56px;
+  padding: 72px 0;
+}
+
+.profile-photo {
+  width: 240px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 6px solid #ffffff;
+  background: #dcebe8;
+  box-shadow: 0 12px 32px rgb(23 43 70 / 10%);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #176b64;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 0 0 16px;
+  color: #172b46;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.2;
+}
+
+.hero-description {
+  max-width: 480px;
+  margin-bottom: 24px;
+  color: #536278;
+}
+
+/* Content sections */
+.card {
+  margin-bottom: 28px;
+  padding: 36px;
+  background: #ffffff;
+  border: 1px solid #e1e7ef;
+  border-radius: 18px;
+  scroll-margin-top: 24px;
+}
+
+h2 {
+  margin: 0 0 16px;
+  color: #172b46;
+  font-size: 26px;
+}
+
+.card p {
+  margin: 0 0 20px;
+}
+
+.text-link {
+  font-weight: 600;
+}
+
+/* Skills list */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 28px;
+  margin: 0;
+  padding-left: 24px;
+}
+
+.skills-list li {
+  padding: 8px;
+}
+
+.skills-list li::marker {
+  color: #176b64;
+}
+
+/* Contact form */
+form {
+  display: grid;
+  gap: 10px;
+  max-width: 640px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  border: 1px solid #b9c5d3;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #243247;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 3px solid #b9ded8;
+  border-color: #176b64;
+}
+
+/* Links and buttons */
+.button {
+  display: inline-block;
+  justify-self: start;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 8px;
+  background: #176b64;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #10534d;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #d28a17;
+  outline-offset: 4px;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 48px;
+  padding: 32px 5%;
+  background: #172b46;
+  color: #e5edf6;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0 0 12px;
+}
+
+.site-footer div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.site-footer a {
+  color: #ffffff;
+}
+
+/* Mobile screens */
+@media (max-width: 640px) {
+  .header-content {
+    flex-direction: column;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 28px;
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Space above the content on the about page */
+.about-page {
+  padding-top: 40px;
+}

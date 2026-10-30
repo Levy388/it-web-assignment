@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Page | Li Jinhao</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f3f6fa;
+      color: #243247;
+    }
+
+    button {
+      padding: 10px 18px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="myHeading">Welcome!</h1>
+
+  <button id="myButton" type="button">Click Me</button>
+  <button id="resetButton" type="button">Reset</button>
+
+<script>
+  const heading = document.getElementById("myHeading");
+  const button = document.getElementById("myButton");
+  const resetButton = document.getElementById("resetButton");
+
+  button.addEventListener("click", function () {
+    heading.textContent = "You clicked it! Have a great day!";
+    heading.style.color = "#176b64";
+  });
+
+  resetButton.addEventListener("click", function () {
+    heading.textContent = "Welcome!";
+    heading.style.color = "";
+  });
+</script>
+</body>
+</html>
